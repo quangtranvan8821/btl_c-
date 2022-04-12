@@ -1,0 +1,10 @@
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\obj\Debug\BTL_HuongSuKien.csproj.AssemblyReference.cache
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\obj\Debug\BTL_HuongSuKien.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\obj\Debug\BTL_HuongSuKien.Properties.Resources.resources
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\obj\Debug\BTL_HuongSuKien.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\obj\Debug\BTL_HuongSuKien.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\bin\Debug\BTL_HuongSuKien.exe.config
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\bin\Debug\BTL_HuongSuKien.exe
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\bin\Debug\BTL_HuongSuKien.pdb
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\obj\Debug\BTL_HuongSuKien.exe
+C:\Users\Administrator\Documents\BTL_Huong_Su_Kien\btl_huong_su_kien\BTL_HuongSuKien\obj\Debug\BTL_HuongSuKien.pdb

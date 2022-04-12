@@ -53,11 +53,23 @@
     <Compile Include="DTO\ChucVu.cs" />
     <Compile Include="DTO\PhongBan.cs" />
     <Compile Include="DTO\NhanVien.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\ThongTinChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\ThongTinChiTiet.Designer.cs">
+      <DependentUpon>ThongTinChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThemvaXoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThemvaXoa.Designer.cs">
+      <DependentUpon>ThemvaXoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuanLiNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuanLiNhanVien.Designer.cs">
+      <DependentUpon>QuanLiNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

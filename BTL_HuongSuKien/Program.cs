@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_HuongSuKien.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace BTL_HuongSuKien
@@ -13,7 +14,7 @@ namespace BTL_HuongSuKien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new QuanLiNhanVien());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace BTL_HuongSuKien.Forms
 {
-    partial class ThongTinChiTiet
+    partial class ChiTietNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -142,7 +142,7 @@
             this.buttonBangLuong.Text = "Lương Nhân Viên";
             this.buttonBangLuong.UseVisualStyleBackColor = true;
             // 
-            // Form3
+            // ChiTietNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,8 +159,9 @@
             this.Controls.Add(this.labelChucVu);
             this.Controls.Add(this.labelPhongBan);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form3";
+            this.Name = "ChiTietNhanVien";
             this.Text = "Thông Tin Nhân Viên";
+            this.Load += new System.EventHandler(this.loadDataNhanVien);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

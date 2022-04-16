@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 namespace BTL_HuongSuKien
 {
-    public class connectDB
+    public class ConnectDB
     {
         //connect to db
         public SqlConnection getConnect()

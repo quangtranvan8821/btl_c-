@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace BTL_HuongSuKien.Forms
 {
-    public partial class ThongTinChiTiet : Form
+    public partial class ChiTietNhanVien : Form
     {
-        public ThongTinChiTiet()
+        public ChiTietNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void loadDataNhanVien(object sender, EventArgs e)
+        {
+            MessageBox.Show("Id_nhan_vien: " + QuanLiNhanVien.id_nhan_vien.ToString());
+            ConnectDB connect = new ConnectDB();
         }
     }
 }

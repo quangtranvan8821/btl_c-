@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -62,7 +63,7 @@
             this.phòngBanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1000, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,8 +84,9 @@
             this.dataGridViewDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDSNhanVien.Location = new System.Drawing.Point(93, 97);
             this.dataGridViewDSNhanVien.Name = "dataGridViewDSNhanVien";
-            this.dataGridViewDSNhanVien.Size = new System.Drawing.Size(606, 228);
+            this.dataGridViewDSNhanVien.Size = new System.Drawing.Size(850, 250);
             this.dataGridViewDSNhanVien.TabIndex = 1;
+            this.dataGridViewDSNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getIdNhanVien);
             // 
             // buttonLocTheoTen
             // 
@@ -129,7 +131,7 @@
             // 
             // buttonThemXoa
             // 
-            this.buttonThemXoa.Location = new System.Drawing.Point(209, 345);
+            this.buttonThemXoa.Location = new System.Drawing.Point(259, 364);
             this.buttonThemXoa.Name = "buttonThemXoa";
             this.buttonThemXoa.Size = new System.Drawing.Size(113, 40);
             this.buttonThemXoa.TabIndex = 6;
@@ -138,19 +140,19 @@
             // 
             // buttonChiTietNV
             // 
-            this.buttonChiTietNV.Location = new System.Drawing.Point(455, 345);
+            this.buttonChiTietNV.Location = new System.Drawing.Point(586, 364);
             this.buttonChiTietNV.Name = "buttonChiTietNV";
             this.buttonChiTietNV.Size = new System.Drawing.Size(113, 40);
             this.buttonChiTietNV.TabIndex = 7;
             this.buttonChiTietNV.Text = "Xem Chi Tiết";
             this.buttonChiTietNV.UseVisualStyleBackColor = true;
+            this.buttonChiTietNV.Click += new System.EventHandler(this.openChiTietNhanVien);
             // 
-            // FormQLNV
+            // QuanLiNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //    this.BackgroundImage = global::BTL_HuongSuKien.Properties.Resources.pngtree_office_literary_fresh_hand_drawn_background_illustration_backgroundhand_painted_backgroundmeeting_image_595905;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.buttonChiTietNV);
             this.Controls.Add(this.buttonThemXoa);
             this.Controls.Add(this.comboBoxLocTheoCV);
@@ -159,8 +161,9 @@
             this.Controls.Add(this.buttonLocTheoTen);
             this.Controls.Add(this.dataGridViewDSNhanVien);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "FormQLNV";
+            this.Name = "QuanLiNhanVien";
             this.Text = "Quản Lí Nhân Viên";
+            this.Load += new System.EventHandler(this.loadDanhSachNhanVien);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSNhanVien)).EndInit();

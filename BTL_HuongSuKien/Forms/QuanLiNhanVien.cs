@@ -12,7 +12,7 @@ namespace BTL_HuongSuKien.Forms
 {
     public partial class QuanLiNhanVien : Form
     {
-        public static int id_nhan_vien = 0;
+        public static int id_nhan_vien = 1;
         public QuanLiNhanVien()
         {
             InitializeComponent();

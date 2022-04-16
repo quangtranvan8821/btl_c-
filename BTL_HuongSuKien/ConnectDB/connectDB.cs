@@ -9,8 +9,8 @@ namespace BTL_HuongSuKien
         public SqlConnection getConnect()
         {
             //connect string here
-            //String strConn = @"Data Source=DESKTOP-88CSDCF\SQLEXPRESS;Initial Catalog=BTL_QLNS;Integrated Security=True";
-            String strConn = @"Data Source=DESKTOP-Q609H2F;Initial Catalog=BTL_QLNS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            String strConn = @"Data Source=DESKTOP-88CSDCF\SQLEXPRESS;Initial Catalog=BTL_QLNS;Integrated Security=True";
+            //String strConn = @"Data Source=DESKTOP-Q609H2F;Initial Catalog=BTL_QLNS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             return new SqlConnection(strConn);
         }
         public DataTable getTable(String sql)

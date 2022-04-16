@@ -49,7 +49,9 @@
             this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.buttonXoa = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelSoDienThoai = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,7 +132,7 @@
             // 
             this.labelMaNhanVien.AutoSize = true;
             this.labelMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaNhanVien.Location = new System.Drawing.Point(597, 223);
+            this.labelMaNhanVien.Location = new System.Drawing.Point(597, 222);
             this.labelMaNhanVien.Name = "labelMaNhanVien";
             this.labelMaNhanVien.Size = new System.Drawing.Size(107, 20);
             this.labelMaNhanVien.TabIndex = 24;
@@ -139,7 +141,7 @@
             // textBoxMaNhanVien
             // 
             this.textBoxMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMaNhanVien.Location = new System.Drawing.Point(710, 223);
+            this.textBoxMaNhanVien.Location = new System.Drawing.Point(710, 220);
             this.textBoxMaNhanVien.Name = "textBoxMaNhanVien";
             this.textBoxMaNhanVien.Size = new System.Drawing.Size(192, 22);
             this.textBoxMaNhanVien.TabIndex = 25;
@@ -156,7 +158,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(597, 275);
+            this.label2.Location = new System.Drawing.Point(597, 324);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 27;
@@ -212,7 +214,7 @@
             // 
             this.panel1.Controls.Add(this.radioButtonNu);
             this.panel1.Controls.Add(this.radioButtonNam);
-            this.panel1.Location = new System.Drawing.Point(710, 264);
+            this.panel1.Location = new System.Drawing.Point(710, 313);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 94);
             this.panel1.TabIndex = 32;
@@ -250,14 +252,31 @@
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // textBox1
             // 
-            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
-            this.groupBox1.Location = new System.Drawing.Point(2, -2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(998, 181);
-            this.groupBox1.TabIndex = 34;
-            this.groupBox1.TabStop = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(710, 273);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(192, 22);
+            this.textBox1.TabIndex = 35;
+            // 
+            // labelSoDienThoai
+            // 
+            this.labelSoDienThoai.AutoSize = true;
+            this.labelSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSoDienThoai.Location = new System.Drawing.Point(597, 275);
+            this.labelSoDienThoai.Name = "labelSoDienThoai";
+            this.labelSoDienThoai.Size = new System.Drawing.Size(106, 20);
+            this.labelSoDienThoai.TabIndex = 34;
+            this.labelSoDienThoai.Text = "Số điện thoại:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Location = new System.Drawing.Point(-19, -32);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1039, 228);
+            this.panel2.TabIndex = 36;
             // 
             // ChiTietNhanVien
             // 
@@ -265,7 +284,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1000, 650);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelSoDienThoai);
             this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);
@@ -315,6 +336,8 @@
         private System.Windows.Forms.RadioButton radioButtonNam;
         private System.Windows.Forms.RadioButton radioButtonNu;
         private System.Windows.Forms.Button buttonXoa;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelSoDienThoai;
+        private System.Windows.Forms.Panel panel2;
     }
 }

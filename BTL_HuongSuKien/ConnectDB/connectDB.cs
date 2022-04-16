@@ -26,6 +26,33 @@ namespace BTL_HuongSuKien
             conn.Close();
             return dt;
         }
+
+        public string getChiTietNhanVien(String sql, String procVar, int data)
+        {
+            SqlConnection conn = getConnect();
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new SqlParameter(procVar, data));
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                // iterate through results, printing each to console
+                while(reader.Read())
+                {
+                    string hoTen = reader["Họ tên"].ToString();
+                    return hoTen;
+                }
+            }
+            return "No Data";
+        }
+
         public void ExcuteNonQuery(String sql)
         {
             SqlConnection conn = getConnect();

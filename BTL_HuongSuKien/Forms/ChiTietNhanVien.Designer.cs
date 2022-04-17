@@ -71,6 +71,7 @@
             this.buttonSua.TabIndex = 17;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // buttonChiTietHopDong
             // 
@@ -252,6 +253,7 @@
             this.buttonXoa.TabIndex = 33;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // textBoxSDT
             // 

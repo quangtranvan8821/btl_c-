@@ -65,5 +65,83 @@ namespace BTL_HuongSuKien.Forms
             int index = Convert.ToInt32(connect.ExcuteScalar(sql));
             return index;
         }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            ConnectDB connectDB = new ConnectDB();
+            SqlConnection conn = connectDB.getConnect();
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("procSuaChiTietNhanVien", conn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new SqlParameter("@id", textBoxMaNhanVien.Text));
+            cmd.Parameters.Add(new SqlParameter("@id_chuc_vu", comboBoxTenChucVu.SelectedIndex + 1));
+            cmd.Parameters.Add(new SqlParameter("@id_phong_ban", comboBoxTenPhongBan.SelectedIndex + 1));
+            cmd.Parameters.Add(new SqlParameter("@ten_nhan_vien", textBoxTenNhanVien.Text));
+            cmd.Parameters.Add(new SqlParameter("@ngay_sinh", textBoxNgaySinh.Text));
+            cmd.Parameters.Add(new SqlParameter("@dia_chi", textBoxDiaChi.Text));
+            cmd.Parameters.Add(new SqlParameter("@sdt", textBoxSDT.Text));
+            cmd.Parameters.Add(new SqlParameter("@gioi_tinh", radioButtonNam.Checked == true ? "Nam" : "Nu"));
+            cmd.Parameters.Add(new SqlParameter("@trang_thai", "0"));
+            if (MessageBox.Show("Bạn có muốn xóa nhân viên này không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Xóa nhân viên thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa nhân viên thất bại!");
+                }
+            }
+            else
+            {
+                //e.Cancel = true;
+            }
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+            ConnectDB connectDB = new ConnectDB();
+            SqlConnection conn = connectDB.getConnect();
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("procSuaChiTietNhanVien", conn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new SqlParameter("@id", textBoxMaNhanVien.Text));
+            cmd.Parameters.Add(new SqlParameter("@id_chuc_vu", comboBoxTenChucVu.SelectedIndex+1));
+            cmd.Parameters.Add(new SqlParameter("@id_phong_ban",comboBoxTenPhongBan.SelectedIndex+1 ));
+            cmd.Parameters.Add(new SqlParameter("@ten_nhan_vien", textBoxTenNhanVien.Text));
+            cmd.Parameters.Add(new SqlParameter("@ngay_sinh", textBoxNgaySinh.Text));
+            cmd.Parameters.Add(new SqlParameter("@dia_chi", textBoxDiaChi.Text));
+            cmd.Parameters.Add(new SqlParameter("@sdt", textBoxSDT.Text));
+            cmd.Parameters.Add(new SqlParameter("@gioi_tinh", radioButtonNam.Checked==true?"Nam":"Nu"));
+            cmd.Parameters.Add(new SqlParameter("@trang_thai", 1));
+            if (MessageBox.Show("Bạn có muốn sửa nhân viên này không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Sửa nhân viên thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Sửa nhân viên thất bại!");
+                }
+            }
+            else
+            {
+                //e.Cancel = true;
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace BTL_HuongSuKien
         {
             //connect string here
             //String strConn = @"Data Source=DESKTOP-88CSDCF\SQLEXPRESS;Initial Catalog=BTL_QLNS;Integrated Security=True";
-            String strConn = ConfigurationManager.ConnectionStrings["connectQ"].ConnectionString;
+            String strConn = ConfigurationManager.ConnectionStrings["connectK"].ConnectionString;
             return new SqlConnection(strConn);
         }
         public DataTable getTable(String sql)

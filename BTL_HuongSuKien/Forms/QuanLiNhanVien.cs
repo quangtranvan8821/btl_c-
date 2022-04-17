@@ -47,5 +47,23 @@ namespace BTL_HuongSuKien.Forms
 
             chiTietNhanVien.Show();
         }
+
+        //click button lọc -> filter danh sach nhan vien
+        private void filterDanhSachNhanVien(object sender, EventArgs e)
+        {
+            getDanhSachNhanVienFiltered();
+        }
+
+
+        //filter danh sach nhan vien
+        private void getDanhSachNhanVienFiltered()
+        {
+            ConnectDB connectDB = new ConnectDB();
+
+            string sql = "SELECT * FROM danhSachNhanVien";
+
+            dataGridViewDSNhanVien.DataSource = connectDB.getTable(sql);
+            MessageBox.Show("OK");
+        }
     }
 }

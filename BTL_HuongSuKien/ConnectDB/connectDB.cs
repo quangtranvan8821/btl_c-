@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BTL_HuongSuKien.DTO;
+using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 namespace BTL_HuongSuKien
@@ -9,8 +11,8 @@ namespace BTL_HuongSuKien
         public SqlConnection getConnect()
         {
             //connect string here
-            String strConn = @"Data Source=DESKTOP-88CSDCF\SQLEXPRESS;Initial Catalog=BTL_QLNS;Integrated Security=True";
-            //String strConn = @"Data Source=DESKTOP-Q609H2F;Initial Catalog=BTL_QLNS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //String strConn = @"Data Source=DESKTOP-88CSDCF\SQLEXPRESS;Initial Catalog=BTL_QLNS;Integrated Security=True";
+            String strConn = ConfigurationManager.ConnectionStrings["connectK"].ConnectionString;
             return new SqlConnection(strConn);
         }
         public DataTable getTable(String sql)
@@ -27,7 +29,7 @@ namespace BTL_HuongSuKien
             return dt;
         }
 
-        public string getChiTietNhanVien(String sql, String procVar, int data)
+        public object getChiTietNhanVien(String sql, String procVar, int data)
         {
             SqlConnection conn = getConnect();
             if (conn.State == ConnectionState.Closed)
@@ -46,11 +48,21 @@ namespace BTL_HuongSuKien
                 // iterate through results, printing each to console
                 while(reader.Read())
                 {
-                    string hoTen = reader["Họ tên"].ToString();
-                    return hoTen;
+                    int idnhanvien = Convert.ToInt32(reader["Mã nhân viên"].ToString());
+                    string tennhanvien = reader["Họ tên"].ToString();
+                    string tenchucvu = reader["Tên chức vụ"].ToString();
+                    string tenphongban = reader["Tên phòng ban"].ToString();
+                    DateTime ngaysinh = Convert.ToDateTime(reader["Ngày sinh"].ToString());
+                    string diachi = reader["Địa chỉ"].ToString();
+                    string sdt = reader["Số điện thoại"].ToString();
+                    string gioitinh = reader["Giới tính"].ToString();
+                    int idhopdong = Convert.ToInt32(reader["Mã hợp đồng"].ToString());
+                    int idluong = Convert.ToInt32(reader["Mã bảng lương"].ToString());
+                    NhanVien nhanVien = new NhanVien(idnhanvien, tenphongban, tenchucvu, tennhanvien, ngaysinh, diachi, sdt, gioitinh, idhopdong, idluong);
+                    return nhanVien;
                 }
             }
-            return "No Data";
+            return null;
         }
 
         public void ExcuteNonQuery(String sql)

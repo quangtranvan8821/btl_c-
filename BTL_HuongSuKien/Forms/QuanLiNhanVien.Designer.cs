@@ -46,7 +46,6 @@
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewDSNhanVien = new System.Windows.Forms.DataGridView();
-            this.buttonLocTheoTen = new System.Windows.Forms.Button();
             this.buttonLoc = new System.Windows.Forms.Button();
             this.comboBoxTenChucVu = new System.Windows.Forms.ComboBox();
             this.buttonThemXoa = new System.Windows.Forms.Button();
@@ -88,18 +87,9 @@
             this.dataGridViewDSNhanVien.TabIndex = 1;
             this.dataGridViewDSNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getIdNhanVien);
             // 
-            // buttonLocTheoTen
-            // 
-            this.buttonLocTheoTen.Location = new System.Drawing.Point(93, 49);
-            this.buttonLocTheoTen.Name = "buttonLocTheoTen";
-            this.buttonLocTheoTen.Size = new System.Drawing.Size(87, 30);
-            this.buttonLocTheoTen.TabIndex = 2;
-            this.buttonLocTheoTen.Text = "Tên A-Z";
-            this.buttonLocTheoTen.UseVisualStyleBackColor = true;
-            // 
             // buttonLoc
             // 
-            this.buttonLoc.Location = new System.Drawing.Point(795, 46);
+            this.buttonLoc.Location = new System.Drawing.Point(856, 49);
             this.buttonLoc.Name = "buttonLoc";
             this.buttonLoc.Size = new System.Drawing.Size(87, 30);
             this.buttonLoc.TabIndex = 4;
@@ -115,7 +105,7 @@
             "Phó Phòng",
             "Nhân Viên",
             "Thử Việc"});
-            this.comboBoxTenChucVu.Location = new System.Drawing.Point(560, 55);
+            this.comboBoxTenChucVu.Location = new System.Drawing.Point(334, 55);
             this.comboBoxTenChucVu.Name = "comboBoxTenChucVu";
             this.comboBoxTenChucVu.Size = new System.Drawing.Size(150, 21);
             this.comboBoxTenChucVu.TabIndex = 5;
@@ -143,13 +133,14 @@
             // comboBoxTenPhongBan
             // 
             this.comboBoxTenPhongBan.FormattingEnabled = true;
+            this.comboBoxTenPhongBan.ItemHeight = 13;
             this.comboBoxTenPhongBan.Items.AddRange(new object[] {
             "Phòng kinh doanh",
             "Phòng nhân sự",
             "Phòng kế toán",
             "Phòng marketing",
             "Phòng kỹ thuật"});
-            this.comboBoxTenPhongBan.Location = new System.Drawing.Point(284, 54);
+            this.comboBoxTenPhongBan.Location = new System.Drawing.Point(93, 55);
             this.comboBoxTenPhongBan.Name = "comboBoxTenPhongBan";
             this.comboBoxTenPhongBan.Size = new System.Drawing.Size(150, 21);
             this.comboBoxTenPhongBan.TabIndex = 8;
@@ -166,7 +157,6 @@
             this.Controls.Add(this.buttonThemXoa);
             this.Controls.Add(this.comboBoxTenChucVu);
             this.Controls.Add(this.buttonLoc);
-            this.Controls.Add(this.buttonLocTheoTen);
             this.Controls.Add(this.dataGridViewDSNhanVien);
             this.Controls.Add(this.menuStrip1);
             this.Name = "QuanLiNhanVien";
@@ -184,7 +174,6 @@
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phòngBanToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridViewDSNhanVien;
-        private System.Windows.Forms.Button buttonLocTheoTen;
         private System.Windows.Forms.Button buttonLoc;
         private System.Windows.Forms.ComboBox comboBoxTenChucVu;
         private System.Windows.Forms.Button buttonThemXoa;

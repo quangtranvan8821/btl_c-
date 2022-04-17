@@ -53,6 +53,39 @@ namespace BTL_HuongSuKien
             return "No Data";
         }
 
+        public DataTable getFilterDanhSachNhanVien(string sql, int ma_phong_ban, int ma_chuc_vu)
+        {
+            DataTable dataTable = new DataTable();
+            SqlConnection conn = getConnect();
+
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            if(ma_phong_ban != 0)
+            {
+                cmd.Parameters.Add(new SqlParameter("id_PB", ma_phong_ban));
+            }
+
+            if (ma_chuc_vu != 0)
+            {
+                cmd.Parameters.Add(new SqlParameter("id_CV", ma_phong_ban));
+            }
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                    // với data reader thì dùng dataTable.load
+                    dataTable.Load(reader);
+            }
+
+            return dataTable;
+        } 
+
         public void ExcuteNonQuery(String sql)
         {
             SqlConnection conn = getConnect();

@@ -48,9 +48,11 @@
             this.dataGridViewDSNhanVien = new System.Windows.Forms.DataGridView();
             this.buttonLoc = new System.Windows.Forms.Button();
             this.comboBoxTenChucVu = new System.Windows.Forms.ComboBox();
-            this.buttonThemXoa = new System.Windows.Forms.Button();
+            this.buttonXoaNhanVien = new System.Windows.Forms.Button();
             this.buttonChiTietNV = new System.Windows.Forms.Button();
             this.comboBoxTenPhongBan = new System.Windows.Forms.ComboBox();
+            this.buttonThemNhanVien = new System.Windows.Forms.Button();
+            this.buttonLamMoi = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSNhanVien)).BeginInit();
             this.SuspendLayout();
@@ -111,18 +113,18 @@
             this.comboBoxTenChucVu.TabIndex = 5;
             this.comboBoxTenChucVu.Text = "Chức Vụ";
             // 
-            // buttonThemXoa
+            // buttonXoaNhanVien
             // 
-            this.buttonThemXoa.Location = new System.Drawing.Point(300, 364);
-            this.buttonThemXoa.Name = "buttonThemXoa";
-            this.buttonThemXoa.Size = new System.Drawing.Size(113, 40);
-            this.buttonThemXoa.TabIndex = 6;
-            this.buttonThemXoa.Text = "Thêm, Xóa ";
-            this.buttonThemXoa.UseVisualStyleBackColor = true;
+            this.buttonXoaNhanVien.Location = new System.Drawing.Point(93, 364);
+            this.buttonXoaNhanVien.Name = "buttonXoaNhanVien";
+            this.buttonXoaNhanVien.Size = new System.Drawing.Size(113, 40);
+            this.buttonXoaNhanVien.TabIndex = 6;
+            this.buttonXoaNhanVien.Text = "Xóa nhân viên";
+            this.buttonXoaNhanVien.UseVisualStyleBackColor = true;
             // 
             // buttonChiTietNV
             // 
-            this.buttonChiTietNV.Location = new System.Drawing.Point(624, 364);
+            this.buttonChiTietNV.Location = new System.Drawing.Point(830, 364);
             this.buttonChiTietNV.Name = "buttonChiTietNV";
             this.buttonChiTietNV.Size = new System.Drawing.Size(113, 40);
             this.buttonChiTietNV.TabIndex = 7;
@@ -146,15 +148,37 @@
             this.comboBoxTenPhongBan.TabIndex = 8;
             this.comboBoxTenPhongBan.Text = "Phòng ban";
             // 
+            // buttonThemNhanVien
+            // 
+            this.buttonThemNhanVien.Location = new System.Drawing.Point(238, 364);
+            this.buttonThemNhanVien.Name = "buttonThemNhanVien";
+            this.buttonThemNhanVien.Size = new System.Drawing.Size(113, 40);
+            this.buttonThemNhanVien.TabIndex = 9;
+            this.buttonThemNhanVien.Text = "Thêm nhân viên";
+            this.buttonThemNhanVien.UseVisualStyleBackColor = true;
+            this.buttonThemNhanVien.Click += new System.EventHandler(this.clickThemNhanVien);
+            // 
+            // buttonLamMoi
+            // 
+            this.buttonLamMoi.Location = new System.Drawing.Point(741, 49);
+            this.buttonLamMoi.Name = "buttonLamMoi";
+            this.buttonLamMoi.Size = new System.Drawing.Size(91, 30);
+            this.buttonLamMoi.TabIndex = 10;
+            this.buttonLamMoi.Text = "Làm mới";
+            this.buttonLamMoi.UseVisualStyleBackColor = true;
+            this.buttonLamMoi.Click += new System.EventHandler(this.clickLamMoi);
+            // 
             // QuanLiNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.Controls.Add(this.buttonLamMoi);
+            this.Controls.Add(this.buttonThemNhanVien);
             this.Controls.Add(this.comboBoxTenPhongBan);
             this.Controls.Add(this.buttonChiTietNV);
-            this.Controls.Add(this.buttonThemXoa);
+            this.Controls.Add(this.buttonXoaNhanVien);
             this.Controls.Add(this.comboBoxTenChucVu);
             this.Controls.Add(this.buttonLoc);
             this.Controls.Add(this.dataGridViewDSNhanVien);
@@ -176,10 +200,12 @@
         private System.Windows.Forms.DataGridView dataGridViewDSNhanVien;
         private System.Windows.Forms.Button buttonLoc;
         private System.Windows.Forms.ComboBox comboBoxTenChucVu;
-        private System.Windows.Forms.Button buttonThemXoa;
+        private System.Windows.Forms.Button buttonXoaNhanVien;
         private System.Windows.Forms.Button buttonChiTietNV;
         #endregion
 
         private System.Windows.Forms.ComboBox comboBoxTenPhongBan;
+        private System.Windows.Forms.Button buttonThemNhanVien;
+        private System.Windows.Forms.Button buttonLamMoi;
     }
 }

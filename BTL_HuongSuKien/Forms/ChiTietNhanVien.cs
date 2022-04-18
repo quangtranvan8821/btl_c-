@@ -20,7 +20,6 @@ namespace BTL_HuongSuKien.Forms
 
         private void loadDataNhanVien(object sender, EventArgs e)
         {
-            //MessageBox.Show("Id_nhan_vien: " + QuanLiNhanVien.id_nhan_vien.ToString());
             ConnectDB connect = new ConnectDB();
 
             String sql = "procGetChiTietNhanVien";
@@ -34,12 +33,9 @@ namespace BTL_HuongSuKien.Forms
             textBoxDiaChi.Text = dataNhanVien.Dia_chi.ToString();
             textBoxNgaySinh.Text = dataNhanVien.Ngay_sinh.ToShortDateString();
             textBoxSDT.Text = dataNhanVien.Sdt.ToString();
-/*            comboBoxTenChucVu.SelectedIndex = tenchucvu(dataNhanVien.Ten_chuc_vu) + 1;
-            comboBoxTenPhongBan.SelectedIndex = tenphongban(dataNhanVien.Ten_phong_ban) + 1;*/
 
             comboBoxTenChucVu.SelectedIndex = 1;
             comboBoxTenPhongBan.SelectedIndex = 1;
-            MessageBox.Show(tenchucvu(dataNhanVien.Ten_chuc_vu).ToString());
 
             if (dataNhanVien.Gioi_tinh.ToString() == "Nam")
             {
@@ -49,7 +45,6 @@ namespace BTL_HuongSuKien.Forms
             {
                 radioButtonNu.Checked = true;
             }
-            //MessageBox.Show(dataNhanVien.ToString());
         }
         public int tenchucvu(string ten_chuc_vu)
         {
@@ -88,6 +83,7 @@ namespace BTL_HuongSuKien.Forms
             cmd.Parameters.Add(new SqlParameter("@sdt", textBoxSDT.Text));
             cmd.Parameters.Add(new SqlParameter("@gioi_tinh", radioButtonNam.Checked == true ? "Nam" : "Nu"));
             cmd.Parameters.Add(new SqlParameter("@trang_thai", "0"));
+
             if (MessageBox.Show("Bạn có muốn xóa nhân viên này không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (cmd.ExecuteNonQuery() == 1)
@@ -98,10 +94,6 @@ namespace BTL_HuongSuKien.Forms
                 {
                     MessageBox.Show("Xóa nhân viên thất bại!");
                 }
-            }
-            else
-            {
-                //e.Cancel = true;
             }
         }
 
@@ -137,10 +129,6 @@ namespace BTL_HuongSuKien.Forms
                 {
                     MessageBox.Show("Sửa nhân viên thất bại!");
                 }
-            }
-            else
-            {
-                //e.Cancel = true;
             }
         }
     }

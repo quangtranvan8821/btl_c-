@@ -54,7 +54,7 @@ namespace BTL_HuongSuKien.Forms
             int ma_phong_ban = comboBoxTenPhongBan.SelectedIndex + 1;
             int ma_chuc_vu = comboBoxTenChucVu.SelectedIndex + 1;
 
-            if(ma_phong_ban == 0 && ma_chuc_vu == 0)
+            if (ma_phong_ban == 0 && ma_chuc_vu == 0)
             {
                 ConnectDB connectDB = new ConnectDB();
 
@@ -76,7 +76,7 @@ namespace BTL_HuongSuKien.Forms
 
             int ma_phong_ban = comboBoxTenPhongBan.SelectedIndex + 1;
             int ma_chuc_vu = comboBoxTenChucVu.SelectedIndex + 1;
-            
+
             if (ma_phong_ban == 0 && ma_chuc_vu != 0)
             {
                 sql = "procGetChiTietNhanVien_CV";
@@ -87,12 +87,27 @@ namespace BTL_HuongSuKien.Forms
                 sql = "procGetChiTietNhanVien_PB";
             }
 
-            if(ma_phong_ban != 0 && ma_chuc_vu != 0)
+            if (ma_phong_ban != 0 && ma_chuc_vu != 0)
             {
                 sql = "procGetChiTietNhanVien_PB_CV";
             }
 
             dataGridViewDSNhanVien.DataSource = connectDB.getFilterDanhSachNhanVien(sql, ma_phong_ban, ma_chuc_vu);
+        }
+
+        private void clickThemNhanVien(object sender, EventArgs e)
+        {
+            ThemNhanVien themNhanVien = new ThemNhanVien();
+            themNhanVien.Show();
+        }
+
+        private void clickLamMoi(object sender, EventArgs e)
+        {
+            ConnectDB connectDB = new ConnectDB();
+
+            string sql = "SELECT * FROM danhSachNhanVien";
+
+            getDanhSacnhNhanVien(connectDB.getTable(sql));
         }
     }
 }
